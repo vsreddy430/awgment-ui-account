@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "jsx": "react",
+        "lib": ["es6", "dom", "es2019"],
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "strict": true,
+        "target": "esnext",
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "noImplicitAny": false,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "include": ["src", "craco.config.js", "src/custom.d.ts"],
+    "exclude": ["node_modules", "dist", "**/__tests__/*"]
+}
