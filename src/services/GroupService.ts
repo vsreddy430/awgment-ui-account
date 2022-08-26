@@ -76,7 +76,7 @@ export const getGroupById = async (
     id: string,
     apiUrl: string,
 ): Promise<{ success: boolean; message?: string; data?: GroupData }> => {
-    const r: ResponseProps = (await request.get(`$${apiUrl}${GROUPS}${id}`)) as ResponseProps;
+    const r: ResponseProps = (await request.get(`${apiUrl}${GROUPS}/${id}`)) as ResponseProps;
     if (r.success) {
         const data: GroupData = r.data as GroupData;
         return { success: true, message: r.message, data: data };
