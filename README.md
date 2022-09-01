@@ -27,7 +27,7 @@ docker build . -t awgment-ui-account
 
 docker run -p 8181:80 --env-file docker.env awgment-ui-account:latest
 
-curl localhost:8181/model/config.json
+curl localhost:8181/account/config.json
 
 ## Prerequisites
 
