@@ -25,7 +25,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Docker build and run
 docker build . -t awgment-ui-account
 
-docker run -p 8181:80 --env-file docker.env awgment-ui-account:latest
+docker run -it -p 8181:80 --env-file docker.env awgment-ui-account:latest
 
 curl localhost:8181/account/config.json
 

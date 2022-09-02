@@ -9,7 +9,7 @@ import { Co2Sharp } from '@mui/icons-material';
 declare const window: any;
 
 window.renderAccountsMFE = (containerId: any, history, userTableData: MfeDataProps) => {
-    fetch('../account/config.json')
+    fetch('../accounts/config.json')
         .then(async (r) => r.json())
         .then((config) => {
             ReactDOM.render(
@@ -26,7 +26,7 @@ window.unmountAccountsMFE = (containerId) => {
 };
 
 if (!document.getElementById('AccountsMFE-container')) {
-    fetch('../account/config.json')
+    fetch('../accounts/config.json')
         .then(async (r) => r.json())
         .then((config) => {
             console.log(config);

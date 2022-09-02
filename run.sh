@@ -2,7 +2,7 @@
 set -xe
 # WEB_ROOT=/usr/share/nginx/html
 
-mkdir $WEB_ROOT/account || true
+mkdir $WEB_ROOT/accounts || true
 
 rm -rf nginx.conf || true
 cat >> nginx.conf << EOF
@@ -17,13 +17,13 @@ server {
         expires      1d;
   }
 
-  location ~ ^/account/((?!(static|(.*\..*))).)+$ {
+  location ~ ^/accounts/((?!(static|(.*\..*))).)+$ {
     
-    try_files /account/index.html =404;
+    try_files /accounts/index.html =404;
   }
 }
 EOF
 
-./env2Json.sh > $WEB_ROOT/account/config.json
+./env2Json.sh > $WEB_ROOT/accounts/config.json
 
 nginx -c nginx.conf  -g "daemon off;"
