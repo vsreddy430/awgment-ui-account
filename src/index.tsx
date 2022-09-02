@@ -29,7 +29,6 @@ if (!document.getElementById('AccountsMFE-container')) {
     fetch('../accounts/config.json')
         .then(async (r) => r.json())
         .then((config) => {
-            console.log(config);
             ReactDOM.render(<KeycloakWrapper config={config} />, document.getElementById('root'));
         });
     // ReactDOM.render(<KeycloakWrapper />, document.getElementById('root'));

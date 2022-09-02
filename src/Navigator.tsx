@@ -18,12 +18,9 @@ const PrivateRoute = ({ component: Component, ...restProps }): React.ReactElemen
     );
 };
 const getBase = (currentLocation: string, config: any) => {
-    console.log('currentLocation', currentLocation);
     const container = `${config.mfeContainerBasename}`;
-    console.log('container env', container);
     if (container) {
         const url = currentLocation.includes(container) ? container : config.publicUrl;
-        console.log('selected url', url);
         return url;
     }
     return config.publicUrl;
