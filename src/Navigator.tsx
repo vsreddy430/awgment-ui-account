@@ -20,10 +20,10 @@ const PrivateRoute = ({ component: Component, ...restProps }): React.ReactElemen
 const getBase = (currentLocation: string, config: any) => {
     const container = `${config.mfeContainerBasename}`;
     if (container) {
-        const url = currentLocation.includes(container) ? container : config.publicUrl;
+        const url = currentLocation.includes(container) ? container : config.publicAccountsUrl;
         return url;
     }
-    return config.publicUrl;
+    return config.publicAccountsUrl;
 };
 const Navigator = ({ history, config }: any): React.ReactElement => {
     // const { keycloak, initialized } = useKeycloak();
